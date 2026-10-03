@@ -1,0 +1,71 @@
+.threat-meter {
+  display: flex;
+  gap: clamp(0.2rem, 0.45vw, 0.4rem);
+  margin-top: 0.6rem;
+}
+
+.threat-meter__segment {
+  width: clamp(0.8rem, 1.7vw, 1.55rem);
+  height: clamp(0.38rem, 0.72vw, 0.65rem);
+  border: 1px solid var(--rule);
+}
+
+.threat-meter__segment--active {
+  border-color: var(--signal);
+  background: var(--signal);
+}
+
+.hull-meter {
+  width: clamp(2.4rem, 4.5vw, 4rem);
+  display: grid;
+  gap: clamp(0.12rem, 0.28vw, 0.25rem);
+  margin-top: 0.45rem;
+  margin-left: auto;
+}
+
+.hull-meter__segment {
+  height: clamp(0.36rem, 0.68vw, 0.58rem);
+  border: 1px solid var(--rule);
+}
+
+.hull-meter__segment--live,
+.hull-meter__segment--warning {
+  border-color: var(--paper);
+  background: var(--paper);
+}
+
+.hull-meter__segment--depleted {
+  border-color: var(--rule);
+  background: transparent;
+}
+
+.hull-meter--critical .hull-meter__segment--warning {
+  border-color: var(--signal);
+  background: var(--signal);
+  animation: hull-warning-pulse 0.9s steps(2, end) infinite;
+}
+
+.life-icons {
+  display: flex;
+  justify-content: flex-end;
+  gap: clamp(0.25rem, 0.55vw, 0.5rem);
+  margin-top: 0.55rem;
+  color: var(--paper);
+}
+
+.life-icons img {
+  width: clamp(0.85rem, 1.55vw, 1.35rem);
+  height: auto;
+}
+
+@keyframes hull-warning-pulse {
+  50% {
+    opacity: 0.2;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hull-meter--critical .hull-meter__segment--warning {
+    animation: none;
+  }
+}

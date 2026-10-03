@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 32" role="img" aria-label="Bunker" style="color: var(--hatch, #5a574f)">
+  <defs>
+    <clipPath id="bunker-area">
+      <rect x="1" y="1" width="94" height="30" />
+    </clipPath>
+  </defs>
+  <g clip-path="url(#bunker-area)" stroke="currentColor" stroke-width="2">
+    <path d="M-41 -5 1 37M-35 -5 7 37M-29 -5 13 37M-23 -5 19 37M-17 -5 25 37M-11 -5 31 37M-5 -5 37 37M1 -5 43 37M7 -5 49 37M13 -5 55 37M19 -5 61 37M25 -5 67 37M31 -5 73 37M37 -5 79 37M43 -5 85 37M49 -5 91 37M55 -5 97 37M61 -5 103 37M67 -5 109 37M73 -5 115 37M79 -5 121 37M85 -5 127 37M91 -5 133 37M97 -5 139 37" />
+  </g>
+</svg>

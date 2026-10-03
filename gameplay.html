@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#12110f" />
+    <title>Space Attack — Gameplay</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Expanded:wght@700;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="stylesheet" href="./styles/pages/gameplay-screen.css" />
+    <script src="./scripts/components/arcade-ui.js" defer></script>
+    <script src="./scripts/audio/sound-engine.js" defer></script>
+    <script src="./scripts/navigation/screen-router.js" defer></script>
+    <script src="./scripts/start-screen.js" defer></script>
+    <script src="./scripts/gameplay-preview.js" defer></script>
+    <script src="./scripts/game/progression.js" defer></script>
+    <script src="./scripts/game/destruction-effects.js" defer></script>
+    <script src="./scripts/game/game-runtime.js" defer></script>
+  </head>
+  <body data-audio-screen="gameplay">
+    <main class="play-screen" aria-label="Space Attack game">
+      <aside class="play-rail play-rail--left" aria-label="Game score and wave details">
+        <score-readout mode="gameplay" label="SCORE" zeros="00" value="4820" high-score="15300" high-label="HI" high-zeros="0"></score-readout>
+
+        <section class="readout readout--wave" aria-label="Wave 1">
+          <p class="readout__label">WAVE</p>
+          <p class="wave-value">01</p>
+        </section>
+
+        <status-meter kind="threat" value="60" max="5"></status-meter>
+        <control-panel mode="compact"></control-panel>
+      </aside>
+
+      <section class="playfield" aria-label="Playfield with enemy formation, shots, bunkers, and player ship">
+        <enemy-formation rows="hard:8,medium:10,medium:10,easy:12"></enemy-formation>
+
+        <bunker-row count="0"></bunker-row>
+        <player-ship></player-ship>
+      </section>
+
+      <aside class="play-rail play-rail--right" aria-label="Hull, lives, and hostile count">
+        <status-meter kind="hull" value="100" max="10"></status-meter>
+        <lives-indicator lives="3" total="3"></lives-indicator>
+
+        <hostile-readout count="40" total="40"></hostile-readout>
+      </aside>
+    </main>
+  </body>
+</html>

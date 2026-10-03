@@ -1,0 +1,12 @@
+.action-link {
+  display: flex;
+  align-items: center;
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.action-link:focus-visible {
+  outline: 2px solid var(--paper);
+  outline-offset: 3px;
+}

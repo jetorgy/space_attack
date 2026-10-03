@@ -1,0 +1,109 @@
+.new-wave-banner {
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(11rem, 0.55fr);
+  align-items: center;
+  gap: clamp(1.25rem, 4vw, 3.75rem);
+  padding: clamp(1rem, 2.6vw, 2.1rem) clamp(1.25rem, 3.2vw, 2.6rem);
+  background: var(--signal);
+  color: var(--ground);
+}
+
+.new-wave-banner__main {
+  min-width: 0;
+}
+
+.new-wave-banner__eyebrow {
+  margin-bottom: clamp(0.3rem, 0.7vw, 0.6rem);
+  color: var(--ground);
+  font-size: clamp(0.6rem, 0.85vw, 0.78rem);
+  font-weight: 600;
+}
+
+.new-wave-banner__title {
+  display: flex;
+  align-items: baseline;
+  gap: 0.04em;
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(4.4rem, 11vw, 9.25rem);
+  font-weight: var(--weight-display);
+  font-stretch: var(--stretch-display);
+  letter-spacing: var(--tracking-tight);
+  line-height: 0.82;
+}
+
+.new-wave-banner__number {
+  font-family: var(--font-data);
+  font-size: 0.9em;
+  font-weight: 600;
+  letter-spacing: -0.055em;
+}
+
+.wave-updates {
+  margin: 0;
+  font-size: clamp(0.58rem, 0.86vw, 0.8rem);
+  letter-spacing: var(--tracking-data);
+  text-transform: uppercase;
+}
+
+.wave-updates__row {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: clamp(0.35rem, 0.72vw, 0.65rem) 0;
+  border-top: 1px solid rgb(18 17 15 / 75%);
+}
+
+.wave-updates__row:last-child {
+  border-bottom: 1px solid rgb(18 17 15 / 75%);
+}
+
+.wave-updates__row dt,
+.wave-updates__row dd {
+  margin: 0;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.wave-countdown {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6em;
+  margin: clamp(0.8rem, 1.6vw, 1.4rem) 0 0;
+  color: var(--mute);
+  font-size: clamp(0.65rem, 0.95vw, 0.9rem);
+  letter-spacing: var(--tracking-data);
+  text-transform: uppercase;
+}
+
+.wave-countdown__value {
+  color: var(--paper);
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+@media (max-width: 760px) {
+  .new-wave-banner {
+    grid-template-columns: 1fr;
+    gap: clamp(1rem, 4vw, 1.75rem);
+  }
+
+  .new-wave-banner__title {
+    font-size: clamp(4.2rem, 18vw, 7rem);
+  }
+}
+
+@media (max-width: 420px) {
+  .new-wave-banner {
+    padding: 1rem;
+  }
+
+  .new-wave-banner__title {
+    font-size: clamp(3.6rem, 18vw, 4.6rem);
+  }
+
+  .wave-updates {
+    font-size: 0.62rem;
+  }
+}

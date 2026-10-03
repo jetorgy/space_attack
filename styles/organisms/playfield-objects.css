@@ -1,0 +1,127 @@
+.enemy-formation {
+  position: absolute;
+  top: 8%;
+  left: 50%;
+  width: min(78%, 48rem);
+  display: grid;
+  gap: clamp(0.55rem, 1.25vw, 1.15rem);
+  transform: translateX(-50%);
+}
+
+.enemy-formation__row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: clamp(0.45rem, 1.45vw, 1.25rem);
+}
+
+.enemy-formation__row img {
+  width: clamp(1.05rem, 3vw, 2.2rem);
+  height: auto;
+  flex: 0 1 2.2rem;
+  color: var(--paper);
+  overflow: visible;
+}
+
+.bunker-row {
+  position: absolute;
+  right: 8%;
+  bottom: 18%;
+  left: 8%;
+  display: flex;
+  justify-content: space-around;
+  gap: clamp(0.4rem, 2vw, 1.75rem);
+}
+
+.bunker-row img {
+  width: clamp(2.8rem, 7vw, 5.8rem);
+  height: auto;
+  color: var(--hatch);
+}
+
+.bunker-row--active {
+  display: block;
+  height: clamp(1.6rem, 3.2vw, 2.8rem);
+}
+
+.bunker-row--active img {
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+}
+
+.bunker-row img.is-damaged {
+  filter: brightness(0.7);
+}
+
+.game-shot {
+  position: absolute;
+  z-index: 4;
+  width: 2px;
+  height: clamp(0.65rem, 1.1vw, 0.95rem);
+  pointer-events: none;
+}
+
+.game-shot--player {
+  background: var(--signal);
+}
+
+.game-shot--enemy {
+  background: var(--paper);
+}
+
+.placeholder-shot {
+  position: absolute;
+  width: 2px;
+  height: clamp(0.9rem, 2vw, 1.5rem);
+  background: var(--paper);
+}
+
+.placeholder-shot--enemy {
+  top: 45%;
+  left: 35%;
+}
+
+.placeholder-shot--player {
+  top: 50%;
+  left: 52%;
+  background: var(--signal);
+}
+
+.placeholder-shot--enemy-right {
+  top: 63%;
+  left: 69%;
+}
+
+.player-ship {
+  position: absolute;
+  bottom: 4%;
+  left: 50%;
+  width: clamp(1.8rem, 3.4vw, 2.8rem);
+  height: auto;
+  color: var(--signal);
+  transform: translateX(-50%);
+}
+
+@media (max-width: 440px) {
+  .enemy-formation {
+    width: 94%;
+  }
+
+  .enemy-formation__row {
+    gap: clamp(0.16rem, 1.4vw, 0.45rem);
+  }
+
+  .enemy-formation__row img {
+    width: clamp(0.7rem, 4.4vw, 1.1rem);
+  }
+
+  .bunker-row {
+    right: 4%;
+    left: 4%;
+  }
+
+  .bunker-row img {
+    width: clamp(2rem, 13vw, 3rem);
+  }
+}

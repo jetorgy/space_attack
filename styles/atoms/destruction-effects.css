@@ -1,0 +1,51 @@
+.enemy-break-flash,
+.enemy-fragment {
+  position: absolute;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.enemy-break-flash {
+  background: var(--signal);
+  animation: enemy-break-flash 75ms steps(2, end) both;
+}
+
+.enemy-fragment {
+  background: var(--paper);
+  transform-origin: center;
+  will-change: left, top, transform, opacity;
+}
+
+.enemy-fragment--signal {
+  background: var(--signal);
+}
+
+.playfield.is-shaking {
+  animation: playfield-impact-shake 190ms ease-out;
+}
+
+@keyframes enemy-break-flash {
+  0%, 55% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes playfield-impact-shake {
+  0%, 100% { transform: translateX(0); }
+  22% { transform: translateX(-2px); }
+  48% { transform: translateX(2px); }
+  72% { transform: translateX(-1px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .enemy-break-flash {
+    animation-duration: 40ms;
+  }
+
+  .playfield.is-shaking {
+    animation-duration: 1ms;
+  }
+
+  .enemy-fragment {
+    will-change: opacity;
+  }
+}

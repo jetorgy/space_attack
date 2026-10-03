@@ -1,0 +1,7 @@
+.pause-readout {
+  padding-top: clamp(0.75rem, 2vw, 1.5rem);
+}
+
+.pause-readout--hull {
+  text-align: right;
+}

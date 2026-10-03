@@ -1,0 +1,119 @@
+.start-screen__record {
+  display: flex;
+  align-items: baseline;
+  gap: 0.7em;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.start-screen__record-label {
+  color: var(--mute);
+}
+
+.start-screen__leading-zero,
+.score-value__zeros,
+.score-best .score-value__zeros,
+.new-wave-score__value span:first-child,
+.pause-readout__score span:first-child {
+  color: var(--rule);
+}
+
+.start-screen__record-value,
+.score-value__live,
+.score-best .score-value__live,
+.new-wave-score__value span:last-child,
+.pause-readout__score span:last-child {
+  color: var(--paper);
+}
+
+.start-screen__record-score {
+  display: inline-flex;
+  gap: 0.7em;
+  color: var(--paper);
+}
+
+.readout {
+  width: 100%;
+}
+
+.readout__label,
+.new-wave__label,
+.pause-readout__label {
+  margin: 0;
+  color: var(--mute);
+  font-size: clamp(0.55rem, 0.76vw, 0.72rem);
+  font-weight: 400;
+  letter-spacing: var(--tracking-data);
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+.readout__value {
+  color: var(--paper);
+}
+
+.score-value {
+  margin: 0.1em 0 0;
+  font-size: clamp(1.25rem, 2.4vw, 2.25rem);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.05;
+  white-space: nowrap;
+}
+
+.score-value__zeros,
+.score-value__live {
+  color: var(--paper);
+}
+
+.score-best {
+  display: flex;
+  gap: 0.45em;
+  margin: 0.3em 0 0;
+  font-size: clamp(0.58rem, 0.85vw, 0.78rem);
+  letter-spacing: var(--tracking-data);
+  line-height: 1.2;
+}
+
+.score-best .readout__label {
+  font-size: inherit;
+}
+
+.wave-value {
+  margin: 0.1em 0 0;
+  color: var(--paper);
+  font-size: clamp(2.7rem, 5.3vw, 5rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 0.95;
+}
+
+.hostile-value {
+  margin: 0.2em 0 0;
+  color: var(--paper);
+  font-size: clamp(1.15rem, 2vw, 1.8rem);
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.hostile-value__total {
+  color: var(--rule);
+}
+
+.new-wave-score__value,
+.pause-readout__score {
+  display: flex;
+  margin: 0.12em 0 0;
+  font-family: var(--font-data);
+  font-size: clamp(1.2rem, 2.2vw, 2.2rem);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1;
+}
+
+.pause-readout__label span,
+.new-wave-hull .new-wave__label span {
+  color: var(--mute);
+}

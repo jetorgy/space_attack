@@ -1,0 +1,56 @@
+:root {
+  color-scheme: dark;
+  font-family: var(--font-data);
+  background: var(--ground);
+  color: var(--paper);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-width: 320px;
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  min-height: 100svh;
+  background: var(--ground);
+}
+
+button,
+kbd {
+  font: inherit;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+arcade-button,
+score-readout,
+status-meter,
+lives-indicator,
+control-panel,
+enemy-formation,
+bunker-row,
+player-ship,
+wave-updates,
+countdown-timer,
+run-summary {
+  display: contents;
+}
+
+arcade-title,
+hostile-readout {
+  display: contents;
+}

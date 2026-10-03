@@ -1,0 +1,18 @@
+:root {
+  --font-display: "Archivo Expanded", "Archivo", sans-serif;
+  --font-data: "IBM Plex Mono", monospace;
+
+  --weight-display: 900;
+  --weight-menu: 700;
+  --weight-data: 500;
+
+  --stretch-display: 125%;
+  --stretch-menu: 112%;
+
+  --tracking-tight: -0.03em;
+  --tracking-menu: -0.015em;
+  --tracking-data: 0.06em;
+
+  --leading-zero-color: var(--rule);
+  --live-digit-color: var(--paper);
+}

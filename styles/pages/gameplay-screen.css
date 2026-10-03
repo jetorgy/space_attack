@@ -1,0 +1,29 @@
+.readout--wave {
+  margin-top: clamp(1.35rem, 4vw, 3.2rem);
+}
+
+.readout--threat {
+  margin-top: clamp(1.35rem, 3.6vw, 2.8rem);
+}
+
+.readout--hull,
+.readout--lives,
+.readout--hostiles {
+  text-align: right;
+}
+
+.readout--lives {
+  margin-top: clamp(1.7rem, 4vw, 3.2rem);
+}
+
+.readout--hostiles {
+  margin-top: auto;
+}
+
+@media (max-width: 760px) {
+  .readout--wave,
+  .readout--threat,
+  .readout--lives {
+    margin-top: 0;
+  }
+}

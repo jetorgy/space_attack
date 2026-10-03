@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#12110f" />
+    <title>Space Attack — Game Over</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Expanded:wght@700;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="stylesheet" href="./styles/pages/game-over-screen.css" />
+    <script src="./scripts/components/arcade-ui.js" defer></script>
+    <script src="./scripts/audio/sound-engine.js" defer></script>
+    <script src="./scripts/navigation/screen-router.js" defer></script>
+    <script src="./scripts/start-screen.js" defer></script>
+    <script src="./scripts/gameplay-preview.js" defer></script>
+    <script src="./scripts/game/progression.js" defer></script>
+    <script src="./scripts/game/destruction-effects.js" defer></script>
+    <script src="./scripts/game/game-runtime.js" defer></script>
+  </head>
+  <body data-audio-screen="game-over">
+    <main class="game-over-screen" aria-label="Game over screen preview">
+      <header class="game-over-header">
+        <p class="game-over-header__edition">SA-01 <span>/</span> DEBRIEF</p>
+        <p class="game-over-header__status">HULL BREACHED <span>·</span> WAVE <span class="game-over-header__wave">07</span></p>
+      </header>
+
+      <section class="game-over-content">
+        <arcade-title variant="game-over"></arcade-title>
+
+        <div class="game-over-summary">
+          <run-summary final-score="012 460" waves-cleared="06" hi-score="015 300"></run-summary>
+
+          <nav class="game-over-actions" aria-label="Game over actions">
+            <arcade-button variant="game-over-primary" label="PLAY AGAIN" hint="ENTER" href="./gameplay.html?restart=1"></arcade-button>
+            <arcade-button variant="game-over-secondary" label="MAIN MENU" hint="ESC" href="./index.html"></arcade-button>
+          </nav>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

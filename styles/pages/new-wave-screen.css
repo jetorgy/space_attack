@@ -1,0 +1,8 @@
+.new-wave-score,
+.new-wave-hull {
+  padding-top: clamp(0.8rem, 2vw, 1.5rem);
+}
+
+.new-wave-hull {
+  text-align: right;
+}
