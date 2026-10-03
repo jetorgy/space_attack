@@ -1,3 +1,5 @@
+![Space Attack main menu](assets/main_menu_img.PNG)
+
 # Space Attack
 
 A responsive browser arcade game built with HTML, CSS, and JavaScript.
